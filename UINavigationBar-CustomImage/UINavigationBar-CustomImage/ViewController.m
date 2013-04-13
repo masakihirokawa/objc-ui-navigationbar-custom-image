@@ -28,32 +28,21 @@
 
 - (void)initNavigationBar
 {
-  UIViewController *vc = [[UIViewController alloc] initWithNibName:@"ExampleView" bundle:nil];
-  UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-  nc.navigationBar.tintColor = [UIColor blackColor];
-  
-  NSString *currentVersion = [[UIDevice currentDevice] systemVersion];
-  if ([currentVersion compare:@"5.0" options:NSNumericSearch] == NSOrderedAscending) {
-    // iOS5.0以前の場合
-    UIImageView *navBg = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg-nav.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:1]];
-    navBg.layer.zPosition = -FLT_MAX;
-    [nc.navigationBar insertSubView:navBg atIndex:0];
-  } else if (([currentVersion compare:@"5.0" options:NSNumericSearch] == NSOrderedSame) || ([currentVersion compare:@"5.0" options:NSNumericSearch] == NSOrderedDescending)) {
-    // iOS5.0以降の場合
-    nc.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg-nav.png"] forBarMetrics:UIBarMetricsDefault];
-  }
-  /*
+  //ナビゲーションバーを初期化
   UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-  UIImage *image = [UIImage imageNamed:@"navigationbar_background.png"];
-  //UIImage *image = [[UIImage imageNamed:@"navigationbar_background.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:1];
-  //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-  [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-  imageView.frame = navigationBar.bounds;
-  imageView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-  imageView.layer.zPosition = -FLT_MAX;
-  [navigationBar insertSubview:imageView atIndex:0];
+  //iOSのバージョン取得
+  float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+  if (systemVersion >= 5.0) {
+    //iOSのバージョンが5.0以上の処理
+    UIImage *backgroundImage = [UIImage imageNamed:@"navigationbar-background.png"];
+    [navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+  } else {
+    //iOSのバージョンが5.0未満の処理
+    NSString *backgroundResource = [[NSBundle mainBundle] pathForResource:@"navigationbar-background" ofType:@"png"];
+    [navigationBar.layer setContents:(id)[UIImage imageWithContentsOfFile: backgroundResource].CGImage];
+  }
+  //ナビゲーションバーをステージに追加
   [self.view addSubview:navigationBar];
-  */
 }
 
 @end

@@ -18,7 +18,7 @@
 		609D55481716F03B00D0F05B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 609D55471716F03B00D0F05B /* Default-568h@2x.png */; };
 		609D554B1716F03B00D0F05B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609D55491716F03B00D0F05B /* MainStoryboard.storyboard */; };
 		609D554E1716F03B00D0F05B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609D554D1716F03B00D0F05B /* ViewController.m */; };
-		609D55551716F22000D0F05B /* navigationbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 609D55541716F22000D0F05B /* navigationbar_background.png */; };
+		C2DB6843171957B500849B16 /* navigationbar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C2DB6842171957B500849B16 /* navigationbar-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		609D554A1716F03B00D0F05B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		609D554C1716F03B00D0F05B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		609D554D1716F03B00D0F05B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		609D55541716F22000D0F05B /* navigationbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_background.png; sourceTree = "<group>"; };
+		C2DB6842171957B500849B16 /* navigationbar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		609D55381716F03B00D0F05B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				609D55541716F22000D0F05B /* navigationbar_background.png */,
+				C2DB6842171957B500849B16 /* navigationbar-background.png */,
 				609D55391716F03B00D0F05B /* UINavigationBar-CustomImage-Info.plist */,
 				609D553A1716F03B00D0F05B /* InfoPlist.strings */,
 				609D553D1716F03B00D0F05B /* main.m */,
@@ -166,7 +166,7 @@
 				609D55461716F03B00D0F05B /* Default@2x.png in Resources */,
 				609D55481716F03B00D0F05B /* Default-568h@2x.png in Resources */,
 				609D554B1716F03B00D0F05B /* MainStoryboard.storyboard in Resources */,
-				609D55551716F22000D0F05B /* navigationbar_background.png in Resources */,
+				C2DB6843171957B500849B16 /* navigationbar-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +302,7 @@
 				609D55531716F03B00D0F05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
